@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Our project</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      body {
+        text-align: center;
+        padding: 50px;
+        max-width: 650px;
+        margin: auto;
+        height: 100vh;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url(./medical.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 15px;
+        border-radius: 3px;
+        font-size: 18px;
+        font-weight: 300;
+        background-color: tomato;
+        color: #fff;
+        border: 0;
+        outline: 0;
+        transition: all 0.2s ease-in-out;
+      }
+
+      button:hover {
+        background-color: rgba(230, 53, 22, 0.93);
+      }
+
+      p {
+        margin-top: 30px;
+        font-size: 1.5rem;
+        padding: 50px;
+        color: tomato;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .reset {
+        background-color: transparent;
+        color: tomato;
+        border: 1px solid tomato;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .reset:hover {
+        color: #fff;
+        background-color: tomato;
+      }
+      .formContainer {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+
+      .formContainer input {
+        width: 100%;
+        padding: 8px 15px;
+        font-size: 18px;
+        border: 1px solid tomato;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      .formContainer input:focus {
+        border: 1px solid tomato;
+        border-radius: 5px;
+      }
+
+      h1 {
+        color: #fff;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🏥 Tc_Assignment</h1>
+    <div class="formContainer">
+      <input
+        type="text"
+        placeholder="Enter a Condition name,  e.g. typhoid"
+        id="condition"
+      />
+    </div>
+    <button class="prompt-input">🍳 Search</button>
+    <button class="reset">Reset</button>
+
+    <p class="msg">🚑🚑🚑</p>
+
+    <div class="overlay hidden"></div>
+    <div class="loader hidden">
+      <img src="./loader-realestate.gif" alt="" />
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
